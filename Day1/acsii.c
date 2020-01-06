@@ -5,28 +5,41 @@
 
 void main() 
 {
-
-int i,a[10],key;
-printf("Enter The elements:\t");
-for(i=0;i<5;i++)
-{
-
-scanf("%d",&a[i]);	
-
-}
-printf("Enter the search key:");
-scanf("%d",&key);
-
-for(i=0;i<5;i++)
-{
-	if(a[i] == key)
+	int i,j,k,a[10],lim,b[10],c[10];
+	printf("Enter limit:\t");
+	scanf("%d",&lim);
+	printf("Enter The numbers:\n");
+	
+	for(i=0;i<lim;i++)
 	{
-		printf("Element  found");
-		break;
+		scanf("%d",&a[i]);
 	}
 	
-
-
-
+	for(i=0;i<=lim;i++)
+	{
+		if(a[i]%2 == 0)
+		{	
+			
+			b[j] = a[i];
+			j++;
+		}
+		else
+		{
+			c[k] = a[i];
+			k++;
+		}
+		
+	}
+	
+	printf("Even Numbers:\n");
+	for(i=0;i<j;i++)
+	{
+		printf("%d \n",b[i]);
+	}
+	printf("Odd Numbers:\n");
+	for(i=0;i<k;i++)
+	{
+		printf("%d \n",c[i]);
+	}
 }
-}
+
