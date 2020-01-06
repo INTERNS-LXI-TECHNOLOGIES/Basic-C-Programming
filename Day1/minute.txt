@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+void main()
+{
+	float a,h,s,c=60;
+	printf("Enter the minutes = ");
+	scanf("%f",&a);
+	h = a/c;
+	printf("The given hours = %f",h);
+	s = a*c;
+    printf("hr\nThe given seconds = %f",s,"sec");
+}	
+	
+  
