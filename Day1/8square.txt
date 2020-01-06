@@ -1,0 +1,8 @@
+int n,res;
+  printf("Enter a number:");
+  scanf("%d",&n);
+  if(n<180)
+  {
+  	res = sqrt(n);
+  }
+  printf("%d",res);
