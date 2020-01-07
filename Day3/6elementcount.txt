@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+void main() 
+{
+
+int i,a[10],key,c=0;
+printf("Enter The elements:\t");
+for(i=0;i<5;i++)
+{
+
+scanf("%d",&a[i]);	
+
+}
+printf("Enter the search key:");
+scanf("%d",&key);
+
+for(i=0;i<5;i++)
+{
+	if(a[i] == key)
+	{
+		c++;
+		
+	}
+
+}
+printf("\n%dElement founded\n",c);
+
+}
