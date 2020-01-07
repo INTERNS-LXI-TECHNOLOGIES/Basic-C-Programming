@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+
+void main()
+ {
+
+	int i,a[10],b[10],d[10],c;
+	printf("Enter The String:\t");
+	gets(a);
+	strcpy(b,a);
+	strrev(b);
+if(strcmp(a,b)==0)
+{
+	printf("pallindrome\t");
+}
+else
+{
+	printf("not pallindrome\t");
+}
+}
+

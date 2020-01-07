@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+
+void main()
+ {
+
+	int i,j,a[10][10],y,x,z;
+	printf("Enter the number of matrix length =\n ");
+	scanf("%d",&x);
+	scanf("%d",&y);
+	printf("Enter the matrix element of 1st = \n");
+	for(i=0;i<x;i++)
+		{
+			for(j=0;j<x;j++)
+			{
+			scanf("%d",&a[i][j]);	
+			}
+		}
+
+	for(i=x-1;i<x;i++)
+		{
+			for(j=0;j<y;j++)
+			{
+			z=z+a[i][j];
+				
+			}
+		printf("sum = \t%d",z);	
+		}		
+}
+
+
