@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+float inchtofeet(float);
+void main ()
+{ 
+	float in,ft;
+	printf("Enter the value = \t");
+	scanf("%f",&in);
+	ft=inchtofeet(in);
+	printf("%f inch to feet value  =  %f",in,ft);
+	
+}
+float inchtofeet(float in)
+{
+	float fet=in/12;
+	return fet;
+	
+}
