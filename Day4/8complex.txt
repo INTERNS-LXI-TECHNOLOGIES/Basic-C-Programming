@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+struct comp
+{
+	int re,im;
+};
+void main()
+{
+	struct comp a,b,c;
+	int ch;
+	printf("Enter the choice = ");
+	scanf("%d",&ch);
+	printf("Enter 1st the complex no = ");
+	scanf("%d",&a.re);
+	scanf("%d",&a.im);
+	printf("Enter 2nd the complex no = ");
+	scanf("%d",&b.re);
+	scanf("%d",&b.im);
+	
+	if (ch ==1)
+	{
+		c.re=a.re+b.re;
+		c.im=a.im+b.im;
+		if(c.im>=0)
+		{
+			printf("Sum = %d +i %d",c.re,c.im);
+		}
+	}
+	else if (ch==2)
+	{
+		c.re=a.re*b.re-a.im*b.im;
+		c.im=a.im*b.re+a.re*b.im;
+		if(c.im>=0)
+		{
+			printf("mul  = %d +i %d",c.re,c.im);
+		}
+	}
+}

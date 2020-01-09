@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+void main() 
+{
+	int i,a[10],lim;
+	printf("Enter limit:\t");
+	scanf("%d",&lim);
+	printf("Enter The numbers:\t");
+	
+	for(i=1;i<=lim;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	
+	for(i=1;i<=lim;i++)
+	{
+		if(a[i]%2 != 0)
+		{
+			printf("%d is odd Number \n ",a[i]);
+		}
+		else
+		{
+		printf("%d is a even number \n",a[i]);
+		}
+	}
+	
+	
+	
+	}
