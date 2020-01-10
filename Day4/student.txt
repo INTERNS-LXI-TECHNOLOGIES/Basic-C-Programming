@@ -1,0 +1,148 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+struct student 
+{
+	char name[25];
+	int rollno;
+	int m1,m2,m3,tmark;
+	float per;
+};
+void totalmark(struct student s[]);
+void search(struct student s[]);
+void display(struct student s[]);
+void percentage(struct student s[]);
+void main()
+{
+	int i;
+	int ch;
+	struct student s[5];
+	printf("Details:\n");
+	for(i=1;i<=2;i++)
+	{
+		printf("Student %d Details:\n",i);
+		printf("Name:");
+		scanf("%s",&s[i].name);
+		printf("Rollno:");
+		scanf("%d",&s[i].rollno);
+		printf("Mark1:");
+		scanf("%d",&s[i].m1);
+		printf("Mark2:");
+		scanf("%d",&s[i].m2);
+		printf("Mark3:");
+		scanf("%d",&s[i].m3);
+	}	
+	printf("\n1.search rollno\n2.Total mark\n3.percentage\n4.display\nEnter Ur choice:\n");
+	scanf("%d",&ch);
+	switch(ch)
+	{
+	
+	case 1:search(s);
+	break;
+	case 2:totalmark(s);
+	break;
+	case 3:percentage(s);
+	break;
+	case 4:display(s);
+	break;
+	default:printf("Valid choice!");
+	}	
+}
+
+
+void search(struct student s[])
+{
+	int i,r;
+
+	printf("Enter rollno to search:\n");
+	scanf("%d",&r);
+	for(i=1;i<=2;i++)
+	{
+		if(s[i].rollno == r)
+		{
+			printf("Rollno exists");
+			break;
+		}
+		if(i==2)
+		{
+		printf("Not found");
+		}
+	}
+}
+
+void totalmark(struct student s[])
+{
+	int i,r,flag=0;
+	printf("Enter rollno:\n");
+	scanf("%d",&r);
+	for(i=1;i<=2;i++)
+	{
+		if(s[i].rollno == r)
+		{
+			flag=1;
+		}
+		if(flag==1)
+		{
+		s[i].tmark = s[i].m1+s[i].m2+s[i].m3;
+		printf(" student %d total mark = %d",i,s[i].tmark);
+		printf("\n");
+		break;
+		}
+		if(i==2)
+		{	
+		printf("Roll Number not exists");
+		}
+	}
+	
+}
+
+
+void percentage(struct student s[])
+{
+	int i,r,flag=0;
+	printf("Enter rollno:\n");
+	scanf("%d",&r);
+	for(i=1;i<=2;i++)
+	{
+		if(s[i].rollno == r)
+		{
+			flag=1;
+		}
+		if(flag==1)
+		{
+		s[i].per = (float)s[i].m1+s[i].m3+s[i].m3/300*100;
+		printf(" student %d percentage = %f",i,s[i].per);
+		printf("\n");
+		break;
+		}
+		if(i==2)
+		{	
+		printf("Roll Number not exists");
+		}
+	}
+		
+	
+	
+}
+
+void display(struct student s[])
+{
+	int i;
+	for(i=1;i<=2;i++)
+	{
+		printf("student %d:",i);
+		printf("--------------");
+		printf("\nName:%s",s[i].name);
+		printf("\nRollno:%d",s[i].rollno);
+		printf("\nMark1:%d",s[i].m1);
+		printf("\nMark2:%d",s[i].m2);
+		printf("\nMark3:%d",s[i].m3);
+		printf("\nTotal Mark:%d\n",s[i].m1+s[i].m2+s[i].m3);
+		s[i].per = (float)s[i].m1+s[i].m2+s[i].m3/300;
+		printf("Percentage:%f \n",s[i].per);
+		printf("\n");
+	}
+	
+}
