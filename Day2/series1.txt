@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int fact(int);
+void main ()
+{
+double n,i,sum;	
+	printf("Enter the number = ");
+	scanf("%lf",&n);
+
+for(i=1;i<=n;i++)
+{ 
+sum=sum+1.0/fact(i);
+}
+printf("sum of series =%lf ",sum);
+}
+int fact(int n)
+{
+	if (n>=1)
+	{
+		return n*fact(n-1);
+	}
+	else
+	{
+		return 1;
+	}
+}

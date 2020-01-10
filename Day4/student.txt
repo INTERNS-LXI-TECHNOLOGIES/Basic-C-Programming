@@ -112,7 +112,7 @@ void percentage(struct student s[])
 		}
 		if(flag==1)
 		{
-		s[i].per = (float)s[i].m1+s[i].m3+s[i].m3/300*100;
+		s[i].per = (float)(s[i].m1+s[i].m3+s[i].m3)/300*100;
 		printf(" student %d percentage = %f",i,s[i].per);
 		printf("\n");
 		break;
@@ -140,7 +140,7 @@ void display(struct student s[])
 		printf("\nMark2:%d",s[i].m2);
 		printf("\nMark3:%d",s[i].m3);
 		printf("\nTotal Mark:%d\n",s[i].m1+s[i].m2+s[i].m3);
-		s[i].per = (float)s[i].m1+s[i].m2+s[i].m3/300;
+		s[i].per = (float)(s[i].m1+s[i].m2+s[i].m3)/300*100;
 		printf("Percentage:%f \n",s[i].per);
 		printf("\n");
 	}
