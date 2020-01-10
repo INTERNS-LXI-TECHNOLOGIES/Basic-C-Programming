@@ -1,0 +1,161 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+struct customers 
+{
+	char name[25];
+	int acc;
+	int balance;
+	int depo;
+};
+void balance(struct customers c[]);
+void search(struct customers c[]);
+void display(struct customers c[]);
+void deposit(struct customers c[]);
+void withdraw(struct customers c[]);
+void main()
+{
+	int i;
+	int ch;
+	struct customers c[5];
+	printf("Details:\n");
+	for(i=1;i<=5;i++)
+	{
+		printf("customer %d Details:\n",i);
+		printf("Name:");
+		scanf("%s",&c[i].name);
+		printf("Account no:");
+		scanf("%d",&c[i].acc);
+		printf("Amount Balance:");
+		scanf("%d",&c[i].balance);
+		printf("\n");
+	}	
+	printf("\n\n1.search \n2.withdraw\n3.Deposit\n4.Display\n5.Balance Check\n\nEnter Ur choice:\n");
+	scanf("%d",&ch);
+	switch(ch)
+	{
+	
+	case 1:search(c);
+	break;
+	case 3:deposit(c);
+	break;
+	case 2:withdraw(c);
+	break;
+	case 4:display(c);
+	break;
+	case 5:balance(c);
+	break;
+	}	
+}
+void deposit(struct customers c[])
+{
+		int i,r,d,flag=0;
+
+	printf("\nEnter Account No. to search:\n");
+	scanf("%d",&r);
+	for(i=1;i<=5;i++)
+	{
+		if(c[i].acc == r)
+		{
+			flag =1;
+		}
+		if(flag==1)
+		{
+		printf("\nEnter Deposit Amount \n");
+		scanf("%d",&d);	
+		c[i].balance = c[i].balance+d;
+		printf("\nDeposit Amount \n = %d",c[i].balance);
+		break;
+		}
+		if(i==5)
+		{
+		printf("\nAccount Not found");
+		}
+	}
+
+}
+
+void search(struct customers c[])
+{
+	int i,r;
+
+	printf("\nEnter Account No. to search:\n");
+	scanf("%d",&r);
+	for(i=1;i<=5;i++)
+	{
+		if(c[i].acc == r)
+		{
+		printf("\nName:%s",c[i].name);
+		printf("\nAccount no: %d",c[i].acc);
+		printf("\nAmount Balance:%d",c[i].balance);
+		break;
+		}
+		if(i==5)
+		{
+		printf("Not found");
+		}
+	}
+}
+void balance(struct customers c[])
+{
+	int i,r;
+
+	printf("\nEnter Account No. to Check Balance :\n");
+	scanf("%d",&r);
+	for(i=1;i<=5;i++)
+	{
+		if(c[i].acc == r)
+		{
+		printf("\nName:%s",c[i].name);
+		printf("\nAccount no: %d",c[i].acc);
+		printf("\nAmount Balance:%d",c[i].balance);
+		break;
+		}
+		if(i==5)
+		{
+		printf("Not found");
+		}
+	}
+}
+void withdraw(struct customers c[])
+{
+		int i,r,d,flag=0;
+
+	printf("\nEnter Account No. to search:\n");
+	scanf("%d",&r);
+	for(i=1;i<=5;i++)
+	{
+		if(c[i].acc == r)
+		{
+			flag =1;
+		}
+		if(flag==1)
+		{
+		printf("\nEnter withdraw Amount \n");
+		scanf("%d",&d);	
+		c[i].balance = c[i].balance-d;
+		printf("\nBalance Amount \n = %d",c[i].balance);
+		break;
+		}
+		if(i==5)
+		{
+		printf("\nAccount Not found");
+		}
+	}
+}
+void display(struct customers c[])
+{
+	int i;
+	
+	
+	for(i=1;i<=5;i++)
+	{
+		printf("\ncustomers %d:",i);
+		printf("\n--------------");
+		printf("Name:%d",c[i].name);
+		printf("Account no: %d",c[i].acc);
+		printf("Amount Balance:%d",c[i].balance);
+	}
+	printf("\n");
+}
