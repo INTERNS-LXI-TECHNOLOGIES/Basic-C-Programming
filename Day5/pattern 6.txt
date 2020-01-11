@@ -1,22 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
 
 void main()
 {
-	int i,r,j,k;
+	int i,r,b,x;
 	printf("Enter no.of rows:\n");
 	scanf("%d",&r);
 	
 	for(i=1;i<=r;i++)
 	{	
 		
-		for(j=i;j<r;j++)
+		for(b=i;b<r;b++)
 		{
 			printf(" ");
 		}
-		for(k=1;k<=i;k++)
+		for(x=1;x<=i;x++)
 		{
 			printf(" *");
 		}
@@ -25,11 +25,11 @@ void main()
 	for(i=r;i>=1;i--)
 	{	
 		
-		for(j=r;j>i;j--)
+		for(b=r;b>i;b--)
 		{
 			printf(" ");
 		}
-		for(k=1;k<=i;k++)
+		for(x=1;x<=i;x++)
 		{
 			printf(" *");
 		}

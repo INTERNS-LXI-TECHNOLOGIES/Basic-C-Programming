@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void main ()
+{
+ int n,a;
+ for(n=1;n<=5 ;n++)
+ {
+ 	for(a=n;a<=5;a++)
+ 	{
+ 		printf("*");
+	 }
+	 printf("\n");
+ }
+ for(n=5;n>=0 ;n--)
+ {
+ 	for(a=n+1;a<=5;a++)
+ 	{
+ 		printf("*");
+	 }
+	 printf("\n");
+ }
+ 
+ 
+}

@@ -5,21 +5,23 @@
 
 void main()
 {
-	int i,r,a,b;
+	int i,r,j,k,x=1,y=0;
 	printf("Enter no.of rows:\n");
 	scanf("%d",&r);
-	for(i=r;i>=1;i--)
-	{	
-		
-		for(a=r;a>i;a--)
+	for(i=1;i<=r;i++)
+	{
+		for(j=1;j<=r;j++)
 		{
-			printf(" ");
+		if(i % 2 == 0)
+		{
+			printf("%d",x);
 		}
-		for(b=1;b<=i;b++)
+		else 
 		{
-			printf(" *");
+			printf("%d",y);
+		}
+		
 		}
 		printf("\n");
 	}
-	
 }

@@ -5,21 +5,17 @@
 
 void main()
 {
-	int i,r,a,b;
+	int i,r,j,k;
 	printf("Enter no.of rows:\n");
 	scanf("%d",&r);
-	for(i=r;i>=1;i--)
-	{	
-		
-		for(a=r;a>i;a--)
+	k=1;
+	for(i=1;i<=r;i++)
+	{
+		for(j=1;j<=r;j++)
 		{
-			printf(" ");
+			printf("%d",k);
 		}
-		for(b=1;b<=i;b++)
-		{
-			printf(" *");
-		}
+		k++;
 		printf("\n");
 	}
-	
 }
