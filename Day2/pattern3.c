@@ -11,13 +11,14 @@ void main()
 		for (k=t; k<5; k++)
 		 {
 			printf(" ");
+		}
 		
 		for (j=0; j< i; j++) 
 		{
 			printf(" * ");
 			t = t + 1;
 		}
-		 }
+		
 		printf("\n");
 	}
 }
