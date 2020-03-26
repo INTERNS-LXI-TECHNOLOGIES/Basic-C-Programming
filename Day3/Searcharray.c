@@ -1,7 +1,5 @@
 #include <stdio.h>
- #include <conio.h>
- 
- 
+ #include <conio.h>  
 int main()
 {
     int a[1000],i,n,k;
