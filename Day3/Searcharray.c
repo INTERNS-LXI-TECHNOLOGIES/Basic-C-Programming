@@ -1,12 +1,14 @@
-#include<stdio.h>
-#include<conio.h>
-void main()
+#include <stdio.h>
+ #include <conio.h>
+ 
+ 
+int main()
 {
-	 int a[1000],i,n,k;
+    int a[1000],i,n,k;
    
-    printf("Enter size of the  array  ");
+    printf("Enter size of the  array : ");
     scanf("%d", &n);
-    printf("Enter elements in array  ");
+    printf("Enter elements in array : ");
     for(i=0; i<n; i++)
     {
         scanf("%d",&a[i]);
@@ -19,12 +21,10 @@ void main()
         if(a[i]==k)
         {
 			printf("element found ");
-			printf("The position of the element is%d",i);
             		 
         }
  
     }
     
-	
+	printf("element  not  found");
 }
-
