@@ -5,7 +5,7 @@
 int main()
 {
 
-    int m[3][3],i,j,temp;
+    int m[3][3],i,j;
 
     printf("\n Input Values to Matrix (3x3) : \n ") ;
 
