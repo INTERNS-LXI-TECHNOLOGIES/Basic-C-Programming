@@ -1,6 +1,6 @@
 
 
-// Program to Search for a Number in an Array
+// Program to find the Position of Search Number in an Array
 
 #include <stdio.h>
 
@@ -39,3 +39,4 @@ int main()
         }
 
 }
+
