@@ -1,4 +1,4 @@
-// Program to toogle case of a string
+// Program to title case a string
 
 #include <stdio.h>
 
