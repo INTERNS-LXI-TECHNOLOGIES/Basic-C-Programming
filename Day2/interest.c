@@ -8,7 +8,7 @@ int main()
  
         int p,t;
         float r,si,amount,ci;
-        
+                                                                     
         p=1000000;
         t=10;
  
