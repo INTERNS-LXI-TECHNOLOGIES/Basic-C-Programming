@@ -1,43 +1,41 @@
-
 #include <stdio.h>
+ 
+long linear_search(long [], long, long);
+ 
 int main()
-void accept(int 100[int], array n)
-
 {
- int arr[100],n;
- void accept(int a[100], int n);
- int find(int a[100], int n);
- accept(arr,n);
- find(arr,n);
+   long array[100], search, c, n, position;
+ 
+   printf("Input number of elements in array\n");
+   scanf("%ld", &n);
+ 
+   printf("Input %d numbers\n", n);
+ 
+   for (c = 0; c < n; c++)
+      scanf("%ld", &array[c]);
+ 
+   printf("Input a number to search\n");
+   scanf("%ld", &search);
+ 
+   position = linear_search(array, n, search);
+ 
+   if (position == -1)
+      printf("%d isn't present in the array.\n", search);
+   else
+      printf("%d is present at location %d.\n", search, position+1);
+ 
+   return 0;
 }
-void accept(int 100[int], array n)
+ 
+long linear_search(long a[], long n, long find) 
 {
-  int  c ;
-
-  printf("Enter the number of elements in array\n");
-  scanf("%d", &n);
-
-  printf("Enter %d integer\n", n);
-
-  for (c = 0; c < n; c++)
-    scanf("%d", &array[c]);
-}
-int find(int array[100], int n)
-{
- int search,c;
-  printf("Enter a number to search\n");
-  scanf("%d", &search);
-
-  for (c = 0; c < n; c++)
-  {
-    if (array[c] == search)
-    {
-      printf("%d is present at location %d.\n", search, c+1);
-      break;
-    }
-  }
-  if (c == n)
-    printf("%d isn't present in the array.\n", search);
-
-  return 0;
+   long c;
+ 
+   for (c = 0 ;c < n ; c++ ) 
+	{
+	      if (a[c] == find)
+	         return c;
+   }
+ 
+   return -1;
 }

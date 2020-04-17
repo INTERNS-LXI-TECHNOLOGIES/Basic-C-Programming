@@ -2,16 +2,17 @@
 float inch(float)
 int main()
 {
-    float inches,feet
-    printf(" the length in feet is %f\n",feet);
-    feet = inch;
+    float inches;
+    printf(" the length in feet is %f\n",inches);
+	 scanf("%d",&inches) ;
+	inch(inches)
 }
 float inch(float)
 {
     float feet,inches;
-    printf("enter  the length in inches");
-    scanf("%f",&inches);
-    feet = (0.083) * inch;
+  
+    feet = (0.083) * inches;
+printf("\n \n %d inches = %d feet" ,inches,feet) ;
     
-    return feet;
+    
 }
