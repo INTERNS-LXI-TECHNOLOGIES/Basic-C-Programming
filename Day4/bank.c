@@ -4,7 +4,7 @@ void deposit();
 void withdraw();
 void bal();
 int a=0,i = 101;
-struct bank
+struct customer
 {
         int no;
         char name[20];
@@ -17,12 +17,7 @@ struct bank
                   while(1)
                         {
                               
-                              printf("\n1-Creation");
-                              printf("\n2-Deposit");
-                              printf("\n3-Withdraw");
-                              printf("\n4-Balance Enquiry");
-                              printf("\n5-Exit");
-                              printf("\nEnter your choice");
+                              printf("\n1-Creation \n2-Deposit \n3-Withdraw \n3-Withdraw \n4-Balance Enquiry \n5-Exit \nEnter your choice");
                               scanf("%d",&ch);
                               switch(ch)
                                        {
@@ -35,8 +30,9 @@ struct bank
                                               case 4: bal();
                                                          break;
                                               case 5: exit(0);
-                                                         defalut: printf("Enter 1-5 only");
-                                                         getch();
+                                             
+					      defalut: printf("Enter 1-5 only");
+                                                         
                                         }
                          }
         }
