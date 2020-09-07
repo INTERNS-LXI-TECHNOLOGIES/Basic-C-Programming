@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+
+int main()
+{
+	
+	float basic, da, hra;
+	float pf,it;
+	float net_salary;
+	
+	
+	printf("Enter Basic Salary ($): ");
+	scanf("%f",&basic);
+	printf("Enter HRA ($): ");
+	scanf("%f",&hra);
+	da = (basic*12)/100;
+	
+	pf = (basic*14)/100;
+	
+	net_salary = basic + da + hra -pf;
+	
+	
+	printf("Net Salary is: $ %.02f\n",net_salary);
+	
+	return 0;
+}
+
+

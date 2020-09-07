@@ -1,0 +1,36 @@
+# include<stdio.h>
+int main( )
+{
+ int ch, min, hrs, ds, mon, yrs, sec;
+printf(“\n [1] MINUTES \n [2] HOURS \n [3] DAYS \n [4] MONTHS \n
+[5] SECONDS \n [6] EXIT \n Enter your Choice:”);
+scanf (“%d”, &ch);
+if(ch > 0 && ch < 6)
+{
+printf(“Enter Years:”);
+scanf(“%d”, &yrs);
+}
+mon = yrs * 12;
+ds = mon * 30;
+hrs = ds * 24;
+min = hrs * 60;
+sec = min * 60;
+switch(ch)
+{
+case 1: printf(“\n Minutes : %ld”, min);
+break;
+case 2: printf(“ \n Hours : % ld”, hrs);
+break;
+case 3: printf(“ \n Days : %ld”, ds);
+break;
+case 4: printf( “ \n Months: %ld”, mon);
+break;
+case 5: printf(“ \n Seconds : %ld”, Sec);
+break;
+case 6: printf(“\n Terminated by Choice”);
+exit( ) ;
+break;
+default: printf(“ \n Invalid Choice”);
+}
+return 0:
+}

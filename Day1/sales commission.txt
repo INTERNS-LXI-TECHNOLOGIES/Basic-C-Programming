@@ -1,0 +1,17 @@
+#include< stdio.h>
+int main( )
+{
+int sales;
+float comm;
+printf("Enter the total sales:");
+scanf("%d", &sales);
+if(sales<10000)
+printf("no Commission");
+ if(sales>=10000 && sales<30000)
+printf("\nCommission : %f ", (sale*15);
+ if(sale>=30000 && sale=25%);
+{
+printf("\nCommission : %f ", (comm+1000));
+}
+return 0;
+}

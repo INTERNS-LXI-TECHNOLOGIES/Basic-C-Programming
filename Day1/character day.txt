@@ -1,0 +1,46 @@
+
+#include <stdio.h>
+
+int main()
+{
+    int week;
+
+    printf("Enter week number (0-6): ");
+    scanf("%d", &week);
+
+
+    if(week == 0)
+    {
+        printf("sunday");
+    }
+    else if(week == 1)
+    {
+        printf("monday");
+    }
+    else if(week == 2)
+    {
+        printf("tuesday");
+    }
+    else if(week == 3)
+    {
+        printf("wednesday");
+    }
+    else if(week == 4)
+    {
+        printf("thursday");
+    }
+    else if(week == 5)
+    {
+        printf("friday");
+    }
+    else if(week == 6)
+    {
+        printf("Saturday");
+    }
+    else
+    {
+        printf("Invalid Input! Please enter week number between 0-6.");
+    }
+
+    return 0;
+}
