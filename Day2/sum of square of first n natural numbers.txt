@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main() 
+{
+   int n=5;
+int sum=0;
+   printf( enter a number:"):
+scanf("%d",&n);
+   for (int i = 1; i<= n; i++)
+      sum = sum + (i * i);
+   printf("The sum of squares of first %d\n natural numbers is ",sum,n);
+   return 0;
+}

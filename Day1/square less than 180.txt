@@ -1,0 +1,17 @@
+#include,stdio.h>
+int main()
+{
+int square, num;
+printf("ENTER THE NUM:");
+scanf("%d",&num);
+if(num<=180)
+{
+square=(num * num);
+}
+if(num>180)
+{
+printf(" number is greater than 180:");
+}
+printf("square of %d:",num);
+return 0;
+}
