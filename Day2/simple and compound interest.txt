@@ -1,0 +1,19 @@
+#include <stdio.h>
+ 
+int main()
+{
+    float si,ci,pr,r,t;
+
+ printf("Enter the principal ammount , rate , time:\n");
+    scanf("%d%d%d",&pr,&r,&t);
+
+    si=(pr*r*t)/100;
+
+ci=(pr(1+r)^t)-pr;
+
+printf("simple interest = %d ",si);
+
+printf("compound interest = %d",ci);
+
+    return 0;
+}
