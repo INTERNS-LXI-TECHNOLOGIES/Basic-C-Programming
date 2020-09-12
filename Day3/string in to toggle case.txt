@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+char str[100],ch;
+int i=0;
+printf(" enter the string value \n");
+scanf("%s",&str);
+ch=str[i];
+while(ch!='\0')
+{
+	if(ch==tolower(ch))
+	{
+	printf("%c",toupper(ch));
+	}
+	else
+	{
+	printf("%c",tolower(ch));
+	}
+	i++;
+	ch=str[i];
+}
+	return 0;
+}
+
