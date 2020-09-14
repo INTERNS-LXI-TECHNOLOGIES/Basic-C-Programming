@@ -1,0 +1,25 @@
+ #include<stdio.h>
+ int Reverse(int n)
+ {
+   int sum=0;
+   while (n!=0)
+   {
+     sum = sum*10 + n%10;
+     n /= 10;
+   }
+   return sum;
+ }
+
+ int main()
+ {
+   int n, reverse;
+
+   printf("Enter a positive interger: ");
+   scanf("%d", &n);
+
+   reverse = Reverse(n);
+
+   printf("The reverse of %d is: %d", nz, reverse);
+
+   return 0;
+ }

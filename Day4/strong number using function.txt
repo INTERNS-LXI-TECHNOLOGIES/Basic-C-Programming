@@ -1,0 +1,35 @@
+#include <stdio.h> 
+int fact(int r)  
+{  
+    int mul=1;  
+    for(int i=1;i<=r;i++)  
+    {  
+        mul=mul*i;  
+    }  
+    return mul;  
+      
+}   
+int main()  
+{  
+    int n,r,a,f;  
+    int sum=0;  
+    printf("Enter a number");  
+    scanf("%d",&n);  
+    a=n;  
+    while(a!=0)  
+    {  
+        r=a%10;  
+        f=fact(r);  
+        k=k/10;  
+        sum=sum+f;  
+    }  
+    if(sum==n)  
+    {  
+        printf("\nNumber is a strong");  
+    }  
+    else  
+    {  
+        printf("\nNumber is not a strong");  
+    }  
+    return 0;  
+}  
