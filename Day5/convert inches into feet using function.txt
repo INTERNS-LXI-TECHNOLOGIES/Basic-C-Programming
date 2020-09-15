@@ -1,0 +1,14 @@
+#include<stdio.h>
+int feet2Inches(int f)
+{
+	return (f*12);
+}
+int main()
+{
+		int feet,inches;
+		printf("Enter the value of feet: ");
+		scanf("%d",&feet);
+		inches=feet2Inches(feet);
+		printf("Total inches will be: %d\n",inches);
+		return 0;
+}

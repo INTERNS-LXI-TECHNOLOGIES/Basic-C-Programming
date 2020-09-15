@@ -1,0 +1,116 @@
+#include<stdio.h>
+struct student
+{
+int roll no,s1,s2,s3,s4,s5,m;
+char[50];
+};
+s[5];
+int i;
+int n;
+int m;
+void search (struct student s[5],int m)
+{
+printf("\n roll no= %d",s[i].roll no);
+printf("\n name= %s",s[i].name);
+printf("\n s1= %d",s[i].s1);
+printf("\n s2= %d",s[i].s2);
+printf("\n s3= %d",s[i].s3);
+printf("\n s4= %d",s[i].s4);
+printf("\n s5= %d",s[i].s5);
+}
+int total(struct student s[5],int m)
+{
+int total;
+printf("\n roll no= %d",s[i].roll no);
+printf("\n name= %s",s[i].name);
+printf("\n s1= %d",s[i].s1);
+printf("\n s2= %d",s[i].s2);
+printf("\n s3= %d",s[i].s3);
+printf("\n s4= %d",s[i].s4);
+printf("\n s5= %d",s[i].s5);
+total=s[i].s1+s[i].s2+s[i].s3+s[i].s4+s[i].s5;
+printf("\n total is :%d ",total);
+return total;
+}
+float percentage(struct student s[5],int m)
+{
+float total,percentage;
+printf("\n roll no= %d",s[i].roll no);
+printf("\n name= %s",s[i].name);
+printf("\n s1= %d",s[i].s1);
+printf("\n s2= %d",s[i].s2);
+printf("\n s3= %d",s[i].s3);
+printf("\n s4= %d",s[i].s4);
+printf("\n s5= %d",s[i].s5);
+total=s[i].s1+s[i].s2+s[i].s3+s[i].s4+s[i].s5;
+percentage=total/5;
+printf(" \n percentage is = %f",percentage);
+return percentage;
+}
+void display(struct student s[5])
+{
+for(i=0;i<=5;i++)
+{
+printf("\n roll no= %d",s[i].roll no);
+printf("\n name= %s",s[i].name);
+printf("\n s1= %d",s[i].s1);
+printf("\n s2= %d",s[i].s2);
+printf("\n s3= %d",s[i].s3);
+printf("\n s4= %d",s[i].s4);
+printf("\n s5= %d",s[i].s5);
+}
+}
+void main ()
+{
+int i,n,c,roll no;
+printf(" enter the details \n ");
+for(i=0;i<=5;i++)
+{
+printf(" enter your name ");
+scanf("%s",&s[i].name);
+printf(" enter your roll no");
+scanf("%d",&s[i].roll no);
+printf(" enter your mark 1");
+scanf("%d",&s[i].s1);
+printf(" enter your mark 2");
+scanf("%d",&s[i].s2);
+printf(" enter your mark 3");
+scanf("%d",&s[i].s3);
+printf(" enter your mark 4");
+scanf("%d",&s[i].s4);
+printf(" enter your mark 5");
+scanf("%d",&s[i].s5);
+}
+do
+{
+printf(" enter your choice \n");
+printf(" \n 1.search \n 2.total \n 3.percentage \n 4.display ")
+scanf("%d",&n);
+switch(n)
+{
+case 1: printf(" enter the roll number of the student:");
+	scanf("%d",&s[i].roll no);
+	search(s,roll no);
+	break;
+case 2: printf(" enter the roll number of the student:");
+	scanf("%d",&s[i].roll no);
+	total(s,roll no);
+	break;
+case 3: printf(" enter the roll number of the student:");
+	scanf("%d",&s[i].roll no);
+	percentage(s,roll no);
+	break;
+case 4: printf(" display details of all students");
+	display(s);
+	break;
+default: printf("\n invalid choice ");
+}
+}
+while(c==1);
+}
+
+
+
+
+
+
