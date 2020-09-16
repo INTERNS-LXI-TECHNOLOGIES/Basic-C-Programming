@@ -10,6 +10,8 @@ int n;
 int m;
 void search (struct student s[5],int m)
 {
+for(i=0;
+if(
 printf("\n roll no= %d",s[i].roll no);
 printf("\n name= %s",s[i].name);
 printf("\n s1= %d",s[i].s1);

@@ -1,0 +1,45 @@
+#include <stdio.h>
+ struct employee{
+    char    name[30];
+    int     empId,exp;
+    float   salary;
+};
+int details(struct employee name[50],int empId)
+{
+int i,n,empId,exp;
+float salary;
+char name[50];
+for(i=0,i<=10;i++)
+{
+printf("\nEntered detail is:");
+    printf("Name: %s"   ,emp.name);
+    printf("Id: %d"     ,emp.empId);
+    printf("Salary: %f\n",emp.salary);
+    printf("experence: %d"   ,emp.exp);
+ if(emp.exp>8)
+{
+emp.salary=emp.salary+1000;
+}
+}
+}
+
+ 
+int main()
+{ 
+int i; 
+for(i=0;i<=10;i++)
+{ 
+    printf("\nEnter details :\n");
+    printf("Name ?:");  
+        gets(emp.name);
+    printf("ID ?:");     
+       scanf("%d",&emp.empId);
+    printf("Salary ?:");      
+  scanf("%f",&emp.salary);
+printf("experence ?:");
+scanf("%d ",&emp.exp);
+printf(" above 8 years experenced person salary : %d+1000",emp.salary+1000);
+scanf("%d",&emp.salary)
+details(employee name,empId);
+     return 0;
+}

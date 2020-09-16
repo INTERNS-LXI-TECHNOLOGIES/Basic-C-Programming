@@ -1,0 +1,78 @@
+#include<iostream.h>
+struct student
+{
+int roll;
+char name[50];
+float m1, m2, m3;
+};
+int i;
+int m;
+int r;
+int n;
+ float percentage(struct student s[15],int roll no)
+{
+int total,percentage;
+for(i=0,i<15;i++)
+{
+printf(" \n roll no %d ",s[i].roll no );
+printf("\n name %s " ,s[i].name );
+printf(" \n mark1  %f",s[i].mark1);
+if(mark1<40)
+{
+printf("mark1 is falied",s[i].mark1);
+}
+printf(" \n mark2  %f",s[i].mark2);
+if(mark2<40)
+{
+printf("mark2 is falied",s[i].mark2);
+}
+printf(" \n mark3  %f",s[i].mark3);
+if(mark3<40)
+{
+printf("mark3 is falied",s[i].mark3);
+}
+total=s[i].mark1+s[i].mark2+s[i].mark3;
+percentage=total/3;
+if((s[i].mark1,s[i].mark2,s[i].mark3)<40)
+{
+printf(" the %d is falied in more than 2 sub ",s[i].roll no);
+}
+}
+}
+void main()
+{
+int i,n,roll no;
+float mark1,mark2,mark3;
+char name[50];
+printf(" enter the ditails \n");
+for(i=o;i<15;i++)
+{
+printf(" enter your name");
+scanf("%s",&s[i].name);
+printf(" enter your roll no");
+scanf("%d",&s[i].roll no);
+printf(" enter your mark1=");
+scanf("%f",&s[i].mark1);
+printf(" enter your mark2=");
+scanf("%f",&s[i].mark2);
+printf(" enter your mark3=");
+scanf("%f",&s[i].mark3);
+}
+do
+{
+printf(" enter 1 \n ");
+printf("\n 1.percentage \n ");
+scanf("%d",&n);
+switch(n)
+{
+case 1: printf(" enter your roll no of the student \n ");
+scanf("%d",&s[i].roll no);
+percentage(s,roll no);
+break;
+default: printf(" invalid number ");
+}
+}
+}
+
+
+

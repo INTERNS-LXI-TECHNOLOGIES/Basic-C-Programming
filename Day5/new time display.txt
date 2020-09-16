@@ -1,0 +1,68 @@
+#include <stdio.h>
+struct TIME {
+   int seconds;
+   int minutes;
+   int hours;
+};
+
+void TimePeriod(struct TIME t1,
+                                 struct TIME t2,
+				 struct TIME t3,
+                                 struct TIME *add);
+ {
+   while (seconds > 60)
+ {
+      ++minutes;
+      seconds += 60;
+   }
+  seconds = t1.seconds + t2.seconds + t3.seconds;
+
+   while (minutes > 60) 
+{
+      ++hours;
+     minutes += 60;
+   }
+
+   minutes = t1.minutes + t2.minutes + t3.minutes;
+   hours =  t1.hours + t2.hours + t3.hours;
+}
+int main() 
+{
+   struct TIME t1, t2, t3, add;
+
+   printf("Enter the t1 time. \n");
+   printf("Enter hours, minutes and seconds: ");
+   scanf("%d %d %d", &t1.hours,
+         &t1.minutes,
+         &t1.seconds);
+
+   printf("Enter the t3 time. \n");
+   printf("Enter hours, minutes and seconds: ");
+   scanf("%d %d %d", &t2.hours,
+         &t2.minutes,
+         &t2.seconds);
+
+ printf("Enter the t3 time. \n");
+   printf("Enter hours, minutes and seconds: ");
+   scanf("%d %d %d", &t3.hours,
+         &t3.minutes,
+         &t3.seconds);
+
+TimePeriod(t1, t2, t3, add);
+   printf("\nTime period : %d:%d:%d + ", t1.hours,
+          t1.minutes,
+          t1.seconds);
+
+   printf("%d:%d:%d + ",t2.hours,
+         t2.minutes,
+          t2.seconds);
+
+ printf("%d:%d:%d  ",t3.hours,
+         t3.minutes,
+          t3.seconds);
+
+   printf("= %d:%d:%d\n",add.hours,
+          add.minutes,
+         add.seconds);
+   return 0;
+}
