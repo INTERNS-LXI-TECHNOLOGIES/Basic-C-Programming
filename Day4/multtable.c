@@ -10,17 +10,19 @@ int main()
   
     printf("\nMultiplication Table for %d is:\n", num);  
   
-    tables(num);  
+    tables(num); 
+    printf("%d",num) ;
   
-    return 0;  
 }  
   
 void tables(int a)  
 {  
-    int count;  
+    int count;
+    int mult;  
   
     for(count = 1; count <= 10; count++)  
     {  
-        printf("%d x %d = %d\n", a, count, a*count);  
-    }  
+    mult=a*count;
+   // printf("%d x %d = %d\n", a, count, a*count);  
+    } return mult; 
 } 
