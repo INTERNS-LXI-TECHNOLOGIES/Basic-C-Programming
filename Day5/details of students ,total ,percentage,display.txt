@@ -10,8 +10,8 @@ int n;
 int m;
 void search (struct student s[5],int m)
 {
-for(i=0;
-if(
+for(i=0;i<=5;i++)
+{
 printf("\n roll no= %d",s[i].roll no);
 printf("\n name= %s",s[i].name);
 printf("\n s1= %d",s[i].s1);
@@ -20,9 +20,12 @@ printf("\n s3= %d",s[i].s3);
 printf("\n s4= %d",s[i].s4);
 printf("\n s5= %d",s[i].s5);
 }
+}
 int total(struct student s[5],int m)
 {
 int total;
+for(i=0;i<=5;i++)
+{
 printf("\n roll no= %d",s[i].roll no);
 printf("\n name= %s",s[i].name);
 printf("\n s1= %d",s[i].s1);
@@ -32,11 +35,13 @@ printf("\n s4= %d",s[i].s4);
 printf("\n s5= %d",s[i].s5);
 total=s[i].s1+s[i].s2+s[i].s3+s[i].s4+s[i].s5;
 printf("\n total is :%d ",total);
-return total;
+}
 }
 float percentage(struct student s[5],int m)
 {
 float total,percentage;
+for(i=0;i<=5;i++)
+{
 printf("\n roll no= %d",s[i].roll no);
 printf("\n name= %s",s[i].name);
 printf("\n s1= %d",s[i].s1);
@@ -47,7 +52,7 @@ printf("\n s5= %d",s[i].s5);
 total=s[i].s1+s[i].s2+s[i].s3+s[i].s4+s[i].s5;
 percentage=total/5;
 printf(" \n percentage is = %f",percentage);
-return percentage;
+}
 }
 void display(struct student s[5])
 {
