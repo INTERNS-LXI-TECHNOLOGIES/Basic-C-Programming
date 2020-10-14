@@ -3,11 +3,11 @@
 
 void main()
 {
-    int rl,phy,che,ca,total;
+    int rlno,phy,che,ca,total;
     float per;
     char nm[20],div[10];
     printf("Input the Roll Number of the student :");
-    scanf("%d",&rl);
+    scanf("%d",&rlno);
     printf("Input the Name of the Student :");
     scanf("%s",nm);
     printf("Input  the marks of Physics, Chemistry and Computer Application : ");
@@ -25,7 +25,7 @@ void main()
 	     else
 		strcpy(div,"Fail");
 
-       printf("\nRoll No : %d\nName of Student : %s\n",rl,nm);
+       printf("\nRoll No : %d\nName of Student : %s\n",rlno,nm);
        printf("Marks in Physics : %d\nMarks in Chemistry : %d\nMarks in Computer Application : %d\n",phy,che,ca);
        printf("Total Marks = %d\nPercentage = %5.2f\nDivision = %s\n",total,per,div);
 }
