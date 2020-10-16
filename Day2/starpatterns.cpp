@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+
 int pattern1(int a){
     
     cout<<"Enter the range of a : ";
@@ -58,5 +59,5 @@ int main(){
     }
     return 0;
 }
-     
+   
 
