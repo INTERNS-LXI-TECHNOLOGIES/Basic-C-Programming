@@ -11,12 +11,16 @@ int main(){
     else{
         temp = val1;
     }
-    for(int i=0; i<temp; i++){
-        if(val1%i==0 && val2%i==0){
-            
-
+    while(1){
+        if(temp%val1==0 && temp%val2==0){
+            lcm=temp;
+            break;
             
         }
+        else{
+            temp++;
+        }
+        
     }
     cout<<"\n"<<lcm;
 }
