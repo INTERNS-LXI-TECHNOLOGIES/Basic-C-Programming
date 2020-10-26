@@ -25,20 +25,13 @@ int main() {
             printf(" Enter element b %d,%d: ", i + 1, j + 1);
             scanf("%d", &b[i][j]);
         }
-    }
-
-    // printf("\n\n Enter the Choice");
-    // printf("\n\t\t  1.	Top row elements of a matrix
-	// 	    \n\t\t  2.	Diagonal Elements of a matrix
-	// 	    \n\t\t  3.	Bottom row elements of a matrix");
-    // scanf("%d",&c);
-    
+    }  
 
     for (i = 0; i < row; i++ )
     {
         for (j = 0; j < column; j++) 
         {
-            sum[0][j] = a[0][j] + b[0][j];
+            sum[i][j] = a[i][j] + b[i][j];
         }
     }
     printf("\nSum of 1st row of Matrices A & B \n");
