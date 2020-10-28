@@ -3,7 +3,7 @@
 #include <stdio.h>
 int main()
 {
-   int i,size;
+   int i,size,x=0;
    printf("\n No.of entries to check  : "); 
    scanf("%d", &size);
 
@@ -21,13 +21,17 @@ int main()
       {
          if (array[i] == search)  
          {
-            printf("\n\n No. %d is present at location %d\n\n", search, i + 1);
+            x = 1;
             break;
          }
-      }
-      if (i == size)
-      {
-         printf("\n\n No. %d is not available in the array\n\n", search);
-      }
+          }
+   if ( x == 1 )
+   {
+      printf("\n\n No. %d is present at location %d\n\n", search, i + 1);
+   }
+   else
+   {
+      printf("\n\n No. %d is not available in the array\n\n", search);
+   }
    return 0;
 }
