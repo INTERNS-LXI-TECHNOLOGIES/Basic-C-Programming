@@ -11,13 +11,16 @@ void main()
 void sum()
 {
     int a,b,sum;
-    printf("\n Enter 2 digit number : ");
+    printf("\n Enter a number : ");
     scanf("%d",&a);
 
-    b = a % 10;        
-    a = a / 10;
-    sum = a + b;
-    
+    while (a>0)
+    {
+        b = a % 10; 
+        sum = sum + b;       
+        a = a / 10;
+        
+    }
     printf("\n\t%d",sum);
     printf("\n\n");
 }
