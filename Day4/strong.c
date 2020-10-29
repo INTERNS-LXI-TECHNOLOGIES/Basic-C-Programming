@@ -12,15 +12,21 @@ int main()
 
     a = strong( n );
 
-    if(a == n)
-    printf("\n\t%d is a strong number",n);
+    if ( a == 1 )
+    {
+        printf("\n\t%d is a strong number\n\n",n);
+    }
     else
-    printf("\n\t%d is not a strong number",n);
+    {
+        printf("\n\t%d is not a strong number\n\n",n);
+    }
+    
 }
 
 int strong( int x )
 {
-    int r, s = 0, i, f;
+    int r, s = 0, i, f,temp,flag;
+    temp = x;
     while ( x > 0 )
     {
         r = x % 10;
@@ -31,6 +37,17 @@ int strong( int x )
         }
         s = s + f;
         x = x / 10;
+        if ( s == temp )
+        {
+            flag = 1;
+        }
+        else
+        {
+            flag = 0;
+        }
+        
+        
     }
-    return s;   
+    return flag;
 }
+    
