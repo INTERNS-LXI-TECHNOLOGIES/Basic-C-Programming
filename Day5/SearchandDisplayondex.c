@@ -3,7 +3,7 @@ struct array{
     int limit;
     int arr[20];
 };
-int search(struct array,int);
+void search(struct array,int);
 void main(){
     int s,index;
     struct array data;
@@ -15,15 +15,23 @@ void main(){
     }
     printf("\nEnter the search : ");
     scanf("%d",&s);
-    index = search(data,s)+1;
-    printf("\nThe element %d is precent in %d position ",s,index);
+    search(data,s);
 }
-int search(struct array data,int srch){
-    int temp;
+void search(struct array data,int srch){
+    int temp = -1;
+
     for(int i=0; i<data.limit; i++){
-        if(srch==data.arr[i]){
-            temp=i;
+        for(int j=i+1; j<data.limit; j++){
+            if(srch==data.arr[i]){
+                printf("\nThe element is present in %d position ",i+1);
+                temp=1;
+                break;
+            }
+            
         }
     }
-    return temp;
+    if(temp<0){
+        printf("\nThers no such element");
+    }
+    
 }
