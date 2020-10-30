@@ -50,7 +50,7 @@ int main(){
     }
 }
 void enter(struct Account_details details[20]){
-    for(int i=1; i<=3; i++){
+    for(int i=1; i<=5; i++){
         printf("\nAccount holder name : ");
         scanf("%s",&details[i].name);
         printf("\nAccount number : ");
@@ -61,23 +61,24 @@ void enter(struct Account_details details[20]){
 }
 void search(struct Account_details details[20],int acc_num){
     int index,temp=0;
-    for(int i=1; i<=3; i++){
+    for(int i=1; i<=5; i++){
         if(details[i].acc_no==acc_num){
-            index=1;
+            index=i;
             temp=1;
         }
     }
-    if(index!=0){
+    if(temp==1){
         printf("\nName %s",details[index].name);
-        printf("\nAccount number %d",details[index].acc_no);        
+        printf("\nAccount number %d",details[index].acc_no);
+        printf("\nBAlance : ",details[index].balance);        
     }
-    if(temp==0){
+    else{
         printf("\nInvalid account number ");
     }
 }
 void balance_check(struct Account_details details[20],int acc_num){
     int index=0;
-    for(int i=1; i<=3; i++){
+    for(int i=1; i<=5; i++){
         if(details[i].acc_no==acc_num){
             index=1;
         }
@@ -93,7 +94,7 @@ void balance_check(struct Account_details details[20],int acc_num){
 }
 void display(struct Account_details details[20]){
     printf("\n");
-    for(int i=1; i<=3; i++){
+    for(int i=1; i<=5; i++){
         printf("Name : %s",details[i].name);
         printf("\nAccount number : %d",details[i].acc_no);
         printf("\nBalance : %d",details[i].balance);
@@ -101,7 +102,7 @@ void display(struct Account_details details[20]){
 }
 void deposit(struct Account_details details[20],int acc_num,int depo){
     int index=0;
-    for(int i=1; i<=3; i++){
+    for(int i=1; i<=5; i++){
         if(details[i].acc_no==acc_num){
             index=1;
         }
@@ -110,13 +111,13 @@ void deposit(struct Account_details details[20],int acc_num,int depo){
         printf("\nInvalid Account number ");
     }
     else{
-        details[index].balance += depo;
+        details[index].balance = details[index].balance+depo;
         printf("\nThe new account balance is : %d",details[index].balance);
     }
 }
 void withdraw(struct Account_details details[20],int acc_num,int withdraws){
     int index=0;
-    for(int i=1; i<=3; i++){
+    for(int i=1; i<=5; i++){
         if(details[i].acc_no==acc_num){
             index=1;
         }
@@ -125,6 +126,7 @@ void withdraw(struct Account_details details[20],int acc_num,int withdraws){
         printf("\nInvalid Account number ");
     }
     else{
-        details[index].balance -= withdraws;
+        details[index].balance =  details[index].balance-withdraws;
+        printf("\nThe new account balance is : %d",details[index].balance);
     }    
 }
