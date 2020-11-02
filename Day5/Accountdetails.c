@@ -10,6 +10,217 @@ struct bank{
     char branch[20];
     struct Customer cust[];
 };
+void enter(struct Customer[]);
+void balance_check(struct Customer[],int);
+void display(struct Customer[]);
+void deposit(struct Customer[],int);
+void withdraw(struct Customer[],int);
+void search(struct Customer[],int);
+void main(){
+    struct bank b;
+    printf("Bank Name : ");
+    scanf("%s",&b.name);
+    printf("IFSC code : ");
+    scanf("%d",&b.ifsc);
+    printf("Branch : ");
+    scanf("%s",&b.branch);
+    printf("Enter the Customer datails : \n");
+    enter(b.cust);
+    int option,acc_num;
+    int x=0;
+    do{
+        printf("\n1:Search \n2:Balance Check \n3:Display \n4:Deposit \n5:Withdraw ");
+        scanf("%d",&option);
+        switch(option){
+            case 1:
+            printf("\nEnter the account number to be searched ");
+            scanf("%d",&acc_num);
+            search(b.cust,acc_num); 
+            break;
+            case 2:
+            printf("\nEnter the account number to find the balance : ");
+            scanf("%d",&acc_num);
+            balance_check(b.cust,acc_num); 
+            break;
+            case 3:
+            display(b.cust);
+            break;
+            case 4:
+            printf("\nEnter the account number : ");
+            scanf("%d",&acc_num);
+            deposit(b.cust,acc_num);
+            break;
+            case 5:
+            printf("\nEnter the account number : ");
+            scanf("%d",&acc_num);
+            withdraw(b.cust,acc_num);
+            break;            
+        }
+        printf("\nDo you want do furthur process (1.Yes 0.No) : ");
+        scanf("%d",&x);
+    }while(x==1);
+
+}
+void enter(struct Customer cust[20]){
+    for(int i=1; i<=3; i++){
+        printf("Account Number : ");
+        scanf("%d",&cust[i].acc_no);
+        printf("Customer Name : ");
+        scanf("%s",&cust[i].name);
+        printf("Account Balance : ");
+        scanf("%d",&cust[i].balance);
+    }
+}
+void search(struct Customer cust[20],int acc_num){
+    int index,temp=0;
+    for(int i=1; i<=3; i++){
+        if(cust[i].acc_no==acc_num){
+            index=i;
+            temp=1;
+        }
+    }
+    if(temp==1){
+        printf("\nName %s",cust[index].name);
+        printf("\nAccount number %d",cust[index].acc_no);
+        printf("\nBalance : %d",cust[index].balance);        
+    }
+    else{
+        printf("\nInvalid account number ");
+    }
+}
+void balance_check(struct Customer cust[20],int acc_num){
+    int index,temp=0;
+    for(int i=1; i<=3; i++){
+        if(cust[i].acc_no==acc_num){
+            index=i;
+            temp=1;
+        }
+    }
+    if(temp==1){
+        printf("\nName : %s",cust[index].name);
+        printf("\nThe aacount balance is : %d",cust[index].balance);
+    }
+    else{
+        printf("\nThe account number is invalid ");        
+    }
+}
+void display(struct Customer cust[20]){
+    printf("\n");
+    for(int i=1; i<=3; i++){
+        printf("\nName : %s",cust[i].name);
+        printf("\nAccount number : %d",cust[i].acc_no);
+        printf("\nBalance : %d",cust[i].balance);
+    }
+}
+void deposit(struct Customer cust[20],int acc_num){
+    int index,temp=0;
+    int depo;
+    for(int i=1; i<=3; i++){
+        if(cust[i].acc_no==acc_num){
+            index=i;
+            temp=1;
+        }
+    }
+    if(temp==1){
+        printf("\nAmount Depositted : ");
+        scanf("%d",&depo);
+        cust[index].balance = cust[index].balance+depo;
+        printf("\nThe new account balance is : %d",cust[index].balance);
+        
+    }
+    else{
+        printf("\nInvalid Account number ");
+    }
+}
+void withdraw(struct Customer cust[20],int acc_num){
+    int index,temp=0;
+    int withdraws;
+    for(int i=1; i<=3; i++){
+        if(cust[i].acc_no==acc_num){
+            index=i;
+            temp=1;
+        }
+    }
+    if(temp==1){
+        if(cust[index].balance > 500){
+            printf("\nWithdrawal Amount : ");
+            scanf("%d",&withdraws);
+            cust[index].balance =  cust[index].balance-withdraws;
+            printf("\nThe new account balance is : %d",cust[index].balance);
+        }
+        else{
+            printf("\nAccount has minimum balance");
+        }
+    }
+    else{
+        printf("\nInvalid Account number ");
+    }    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*#include<stdio.h>
+struct Customer{
+    char name[15];
+    int acc_no;
+    int balance;
+};
+struct bank{
+    char name[20];
+    int ifsc;
+    char branch[20];
+    struct Customer cust[];
+};
 void enter(struct bank);
 void balance_check(struct bank,int);
 void display(struct bank);
@@ -155,4 +366,4 @@ void withdraw(struct bank b,int acc_num){
     else{
         printf("\nInvalid Account number ");
     }    
-}
+}*/
