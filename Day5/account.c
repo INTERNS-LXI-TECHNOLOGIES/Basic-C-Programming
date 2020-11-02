@@ -100,7 +100,7 @@ int main()
 
 void add ( struct bank b ) 
 {
-    for( int i = 1; i <= 3; i++ )
+    for( int i = 1; i <= 5; i++ )
     {
         printf("\n Customer Name    : ");
         scanf("%s",&b.c[i].name);
@@ -174,7 +174,7 @@ void acc_balance (int n, struct bank b )
 void deposits ( int n, int deposit, struct bank b)
 {
     int  i, x = 0;
-    for( i = 1; i <= 3; i++ )
+    for( i = 1; i <= 5; i++ )
     {
         if ( b.c[i].acc_no == n )
         {
