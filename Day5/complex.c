@@ -1,67 +1,75 @@
-/*7.	Declare a structure to represent a complex number
-	( a number having real and imaginary part).
+/*7.	Declare add structure to represent add complex number
+	( add number having real and imaginary part).
 
 	Write function to add and multiply two complex numbers*/
 
 #include <stdio.h>
 
-struct  complex3 { int real, imaginary;
-    struct complex1 { int real1, imaginary1 ;}x;
-    struct complex2 { int real2, imaginary2 ;}y; 
-}calc;
+struct  complex_number { int real, imaginary; };
+    
 
-void add ( struct complex1, struct complex2 );
-void mul ( struct complex1, struct complex2 );
-void display ( struct complex1, struct complex2, struct complex3 );
+struct complex_number addition ( struct complex_number, struct complex_number );
+struct complex_number multiplication ( struct complex_number, struct complex_number );
+void display ( struct complex_number );
 
 void main()
 {
-    struct complex1 x;
-    struct complex2 y;
-    struct complex3 z;
+    struct complex_number c1;
+    struct complex_number c2;
+    struct complex_number add;
+    struct complex_number mul;
     
     printf("\n\nEnter 2 Complex numbers");
 
     printf("\n\n   Number 1\n\n");
     printf("Real   : ");
-    scanf("%d", &x.real1);
+    scanf("%d", &c1.real);
     printf("Img    : ");
-    scanf("%d", &x.imaginary1);
+    scanf("%d", &c1.imaginary);
 
     printf("\n\n   Number 2\n\n");
     printf("Real   : ");
-    scanf("%d", &y.real2);
+    scanf("%d", &c2.real);
     printf("Img    : ");
-    scanf("%d", &y.imaginary2);
+    scanf("%d", &c2.imaginary);
     
-    display( x, y, z );
-}
+    printf("\n Sum      =    ");
+        printf("( %d + %di ) + ",c1.real, c1.imaginary);
+        printf("( %d + %di ) =",c2.real, c2.imaginary);
+    
+    add = addition ( c1, c2 );
+    display(add);
 
-void add ( struct complex1 x, struct complex2 y )
-{
-    calc.real = x.real1 + y. real2;
-    calc.imaginary = x.imaginary1 + y.imaginary2;
-    printf(" %d + %di", calc.real, calc.imaginary);  
-}
-
-void mul ( struct complex1 x, struct complex2 y )
-{  
-    calc.real = ( x.real1 * y.real2 ) - ( x.imaginary1 * y.imaginary2 );
-    calc.imaginary = ( x.real1 * y.imaginary2 ) + ( x.imaginary1 * y.real2 );
-    printf(" %d + %di \n\n", calc.real, calc.imaginary);
-}
-
-void display  ( struct complex1 x, struct complex2 y, struct complex3 z )
-{
-    printf("\n Sum \n ");
-    printf("( %d + %di ) + ",x.real1,x.imaginary1);
-        printf("( %d + %di ) =",y.real2,y.imaginary2);
-            add ( x, y );
+    printf("\n\n Product  =    ");
+        printf("( %d + %di ) * ",c1.real, c1.imaginary);
+        printf("( %d + %di ) =",c2.real, c2.imaginary);
+    mul = multiplication ( c1, c2 );
+    display(mul);
 
     printf("\n\n");
+}
 
-    printf("\n Product \n ");
-    printf("( %d + %di ) * ",x.real1,x.imaginary1);
-        printf("( %d + %di ) =",y.real2,y.imaginary2);    
-            mul ( x, y );   
+struct complex_number addition ( struct complex_number c1, struct complex_number c2 )
+{
+    struct complex_number s;
+    s.real = c1.real + c2. real;
+    s.imaginary = c1.imaginary + c2.imaginary;
+    return s;
+
+    // printf(" %d + %di", s.real, s.imaginary);  
+}
+
+struct complex_number multiplication ( struct complex_number c1, struct complex_number c2 )
+{  
+    struct complex_number m;
+    m.real = ( c1.real * c2.real ) - ( c1.imaginary * c2.imaginary );
+    m.imaginary = ( c1.real * c2.imaginary ) + ( c1.imaginary * c2.real );
+    return m;
+
+    // printf(" %d + %di \n\n", mul.real, mul.imaginary);
+}
+
+void display  ( struct complex_number complex )
+{
+    printf(" %d + %di ",complex.real,complex.imaginary);      
 }
