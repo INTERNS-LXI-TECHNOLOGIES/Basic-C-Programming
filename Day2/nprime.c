@@ -1,30 +1,24 @@
 #include<stdio.h>
 #include<conio.h>
-main()
+int main()
 {
-	int i,j,n,prime,count;
-	printf("Enter the value of N : ");
-	scanf("%d",&n);
-	printf("First %d prime numbers are : \n2\n",n);
-	for(count=2;count<=n;i++)
-	{
-		for(j=2;j<i;j++)
-		{
-			if(i%j==0)
-			{
-				prime=0;
-				break;
-				
-			}
-			else
-			{
-				prime=1;
-			}
-		}
-		if(prime==1)
-		{
-			printf("%d\n",i);
-			count++;
-		}
-	}
+    int a,i,c,n;
+    printf("\n Enter the Nth Value : ");
+    scanf("%d",&a);
+
+    for(n = 1 ; n <= a ; n++)
+    {
+        c = 0;
+        for(i = 2 ; i <= n / 2 ; i++)
+        {
+            if(n % i == 0)
+            {
+                c++;
+                break;
+            }
+        }
+        if( c == 0 && n!= 1)
+        printf("%d, ",n);
+    }
+return 0;
 }
