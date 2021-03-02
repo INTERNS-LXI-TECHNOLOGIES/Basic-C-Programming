@@ -5,18 +5,18 @@
 Write your code in this editor and press "Run" button to compile and execute it.
 
 *******************************************************************************/
-
 #include <stdio.h>
 
 int main()
 {
-    int i;
-while(i<=6)
-{
+    int limit,i=0;
+    printf("enter the limit:");
+    scanf("%d",&limit);
+    while(i<=limit)
+ 
+  {
  printf("\n hello");
-i++;   
-}
-
-
+ i++;
+  }
     return 0;
 }
