@@ -3,19 +3,20 @@
                             Online C Compiler.
                 Code, Compile, Run and Debug C program online.
 Write your code in this editor and press "Run" button to compile and execute it.
-to chechk given number is strong number or not?
+to chechk given number is string number or not?
 *******************************************************************************/
 
 #include <stdio.h>
-
 int main()
 {
-    int num,i,fact,temp,r,sum=0;
-    printf("enter a number:");
-    scanf("%d",&num);
-    temp=num;
-    while(num>0)
+    int num,i,fact,temp,r,sum;
+    
+    for(int j=100;j<=1000;j++)
     {
+    num=j;
+    sum=0;
+    while(num>0)
+      {
         r=num%10;
         fact=1;
         for(i=1;i<=r;i++)
@@ -24,18 +25,12 @@ int main()
         }
         sum=sum+fact;
         num=num/10;
-       
-    }
+      }
     
-    if(temp==sum)
-    {
-        printf("%d is strong number",temp);
-        
-    }
-    else
-    {
-        printf("%d is not a strong number",temp);
-    }
+    if(j==sum)
+    printf("\n %d",j);
+    
+  }
    
     return 0;
 }
