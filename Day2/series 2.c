@@ -3,30 +3,24 @@
                             Online C Compiler.
                 Code, Compile, Run and Debug C program online.
 Write your code in this editor and press "Run" button to compile and execute it.
-series1
+
 *******************************************************************************/
 
 #include <stdio.h>
-
+#include <math.h>
 int main()
 {
-    int limit,num=1,i;
-    float sum=1.0,fact;
-    
-    printf("enter limit:");
-    scanf("%d",&limit);
-    while(num<=limit)
-    {
-       fact=1;
-        for(int i=1;i<=num;i++)
-        {
-        fact=fact*i;
-        }
-        sum=sum+(num/fact);
-        num++;
-         
-     }
-     printf("sum: %f",sum);
-   
+  int x,n,sum=0;
+  
+  printf("enter x and n:");
+  scanf("%d %d",&x,&n);
+    for(int i=1;i<=n;i++)
+  {
+          
+           sum=sum+pow(x,i);
+          
+           
+  }printf("sum:%d",sum);
+  
     return 0;
 }
