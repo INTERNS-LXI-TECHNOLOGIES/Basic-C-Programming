@@ -3,34 +3,24 @@
                             Online C Compiler.
                 Code, Compile, Run and Debug C program online.
 Write your code in this editor and press "Run" button to compile and execute it.
-strong series.. 
+.Program to find sum of 10 numbers.
 *******************************************************************************/
 
 #include <stdio.h>
 int main()
 {
-    int num,i,fact,temp,r,sum;
-    
-    for(int j=100;j<=1000;j++)
+    int a[10],i,sum=0;
+    printf("\n Sum of 10 numbers..\n");
+    printf("Enter 10 numbers: ");
+    for(i=0;i<10;i++)
     {
-    num=j;
-    sum=0;
-    while(num>0)
-      {
-        r=num%10;
-        fact=1;
-        for(i=1;i<=r;i++)
-        {
-         fact=fact*i;
-        }
-        sum=sum+fact;
-        num=num/10;
-      }
-    
-    if(j==sum)
-    printf("\n %d",j);
-    
-  }
-   
+        scanf("%d",&a[i]);
+    }
+    printf("sum is:");
+    for(i=0;i<10;i++)
+    {
+    sum=sum+a[i];
+    }
+    printf("%d",sum);
     return 0;
 }

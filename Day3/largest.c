@@ -3,34 +3,32 @@
                             Online C Compiler.
                 Code, Compile, Run and Debug C program online.
 Write your code in this editor and press "Run" button to compile and execute it.
-strong series.. 
+.Program to find largest of n numbers up to the limit.
+
+
 *******************************************************************************/
 
 #include <stdio.h>
 int main()
 {
-    int num,i,fact,temp,r,sum;
-    
-    for(int j=100;j<=1000;j++)
+    int i,limit,a[10],max;
+     
+    printf("enter the limit:");
+    scanf("%d",&limit);
+    printf("\n Enter the values: ");
+    for(i=0;i<limit;i++)
     {
-    num=j;
-    sum=0;
-    while(num>0)
-      {
-        r=num%10;
-        fact=1;
-        for(i=1;i<=r;i++)
+        scanf("%d",&a[i]);
+    }
+     max=a[0];
+    for(i=1;i<limit;i++)
+    {
+        if(max<a[i])
         {
-         fact=fact*i;
-        }
-        sum=sum+fact;
-        num=num/10;
-      }
-    
-    if(j==sum)
-    printf("\n %d",j);
-    
-  }
+        max=a[i];
+        } 
+    }
+    printf("\nThe largest number is :%d",max);
    
     return 0;
 }

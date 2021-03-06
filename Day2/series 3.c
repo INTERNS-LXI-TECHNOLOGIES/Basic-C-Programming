@@ -3,7 +3,7 @@
                             Online C Compiler.
                 Code, Compile, Run and Debug C program online.
 Write your code in this editor and press "Run" button to compile and execute it.
-
+x-x^2+x^3-x^4+...+x^n
 *******************************************************************************/
 
 #include <stdio.h>
