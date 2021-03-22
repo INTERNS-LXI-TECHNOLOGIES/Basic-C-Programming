@@ -3,6 +3,14 @@
                             Online C Compiler.
                 Code, Compile, Run and Debug C program online.
 Write your code in this editor and press "Run" button to compile and execute it.
+1.Program to pass Time structure as argument and display the new Time.
+Structure Time has three members hours, minutes, seconds. If
+
+Time T1 – > 3hrs 40min 35sec
+
+Time T2 -> 2hrs 35min 30sec
+
+Time T3-> 6hrs 16min 5sec
 
 *******************************************************************************/
 #include<stdio.h>
@@ -74,12 +82,12 @@ void search(struct student s[5])
 {
     int i,k=0,number;
     printf("enter regno:");
-    scanf("%d",&s[i].regno);
-    for (i =0;i<5;i++)
+    scanf("%d",&number);
+    for (i=0;i<5;i++)
     {
         if (s[i].regno == number)
         {
-           k=1;
+           k=i;
            break;
         } 
     }
@@ -89,7 +97,9 @@ void search(struct student s[5])
         }
         else
         {
-             printf("Name: %s",s[i].name);
+             printf("Name: %s\n ",s[i].name);
+             printf("total of %s is %.2f\n",s[i].name,s[i].tot);
+             printf("percentage of %s is %.2f\n",s[i].name,s[i].percen);
         }
       
 }
