@@ -9,37 +9,35 @@ Write function to add and multiply two complex numbers.
 #include<stdio.h>
 struct complex
 {
-   float r1;
-   float i1;
-   float r2;
-   float i2;
+    int real;
+    int imag;
 };
-void add(struct complex c);
-void multi(struct complex c);
-void main()
+void add(struct complex co1 , struct complex co2);
+void multi(struct complex co1 , struct complex co2);
+int main()
 {
-    struct complex c;
-    printf("1st complex number..");
-    printf("enter real and imaginary parts :\n");
-    scanf("%f %f",&c.r1,&c.i1);
-    printf("2nd complex number..");
-    printf("enter real and imaginary parts: \n");
-    scanf("%f %f",&c.r2,&c.i2);
-    add(c);
-    multi(c);
+   struct complex co1;
+   struct complex co2;
+   co1.real=23;
+   co1.imag=15;
+   co2.real=13;
+   co2.imag=15;
+   add(co1,co2);
+   multi(co1,co2);
+   return 0;
 }
-void add(struct complex c)
+void add(struct complex co1 , struct complex co2)
 {
     int real,imag;
-    real=c.r1+c.r2;
-    imag=c.i1+c.i2;
-    printf("sum =%d+%di\n",real,imag);
+   real= co1.real+co2.real;
+   imag= co1.imag+co2.imag;
+   printf("sum: %d+%di \n",real,imag);
 }
-void multi(struct complex c)
+void multi(struct complex co1, struct complex co2)
 {
     int a,b,pro;
-     a=((c.r1*c.r2)-(c.i1*c.i2));
-     b=((c.r1*c.i2)+(c.i1*c.r2));
-     pro=((c.r1*c.r2)-(c.i1*c.i2))+((c.r1*c.i2)+(c.i1*c.r2));
+    a= ((co1.real*co2.real)-(co1.imag*co2.imag));
+    b=((co1.real*co2.imag)+(co1.imag*co2.real));
+    pro=a+b;
     printf("product=%d+%di\n",a,b,pro);
 }
