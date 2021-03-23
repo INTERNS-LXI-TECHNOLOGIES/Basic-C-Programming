@@ -3,7 +3,7 @@ int main()
 {
 	int a,b,x;
 	printf("Enter first numbers to find LCM\n");
-	scanf("%d",&a);
+	scanf("%d",&a );
 	printf("Enter second numbers to find LCM\n");
 	scanf("%d",&b);
 	
