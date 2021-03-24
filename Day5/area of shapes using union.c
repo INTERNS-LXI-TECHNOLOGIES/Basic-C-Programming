@@ -7,68 +7,86 @@ Write your code in this editor and press "Run" button to compile and execute it.
 *******************************************************************************/
 #include <stdio.h>
 #include<math.h>
-union triangle
+struct triangle
 {
-    int b;
-    int he;
-    float t;
-    float aot;
+    int breadth;
+    int height;
+    float constant;
+    float area;
 };
-union circle
+struct circle
 {
     float PI;
-    int r;
-    float aoc;
+    int radius;
+    float area;
 };
-union square
+struct square
 {
-    int a;
-    int aos;
+    int side;
+    int area;
 };
-union rectangle
+struct rectangle
 {
-    int w;
-    int h;
-    float aor;
+    int width;
+    int height;
+    float area;
 };
+union shape
+{
+    struct triangle t;
+    struct circle c;
+    struct square s; 
+    struct rectangle r; 
+};  
 int main()
 {
-    union triangle a1;
-    union circle a2;
-    union square a3;
-    union rectangle a4; 
-    
+    union shape obj;
+    int ch;
+    do
+    {
+    printf("\n \n1.triangle area\n 2.circle area\n 3.square area\n 4.rectangle area \n 0.exit \n");
+    printf("enter your choice: \n");
+    scanf("%d",&ch);
+    switch(ch)
+    {
+    case 1:
     printf("triangle\n");
-    a1.b=20;
-    a1.he=12;
-    a1.t= 0.5;
-    printf("base: %d \n height: %d \n t: %f \n",a1.b,a1.he,a1.t);
-    a1.aot=a1.b*a1.he*a1.t;
-    printf("area of triangle is : %.2f  ", a1.aot);
-    printf("\n");
-     
+    obj.t.breadth=20;
+    obj.t.height=12;
+    obj.t.constant= 0.5;
+    printf("base: %d \n height: %d \n t: %f \n",obj.t.breadth,obj.t.height,obj.t.constant);
+    obj.t.area=obj.t.breadth*obj.t.height*obj.t.constant;
+    printf("area of triangle is : %.2f  ",obj.t.area);
+    break;
+    
+    case 2:
     printf("circle\n");
-    a2.PI=3.14;
-    a2.r=3;
-    printf("radius: %d \n",a2.r);
-    a2.aoc=a2.PI*a2.r*a2.r;
-    printf(" area of cicle : %f",a2.aoc);
-     printf("\n");
+    obj.c.PI=3.14;
+    obj.c.radius=3;
+    printf("radius: %d \n",obj.c.radius);
+    obj.c.area=obj.c.PI*obj.c.radius*obj.c.radius;
+    printf(" area of cicle : %f",obj.c.area);
+    break;
     
+    case 3:
     printf("square\n");
-    a3.a=2;
-    printf("a: %d \n",a3.a);
-    a3.aos=a3.a*a3.a;
-    printf("area of square : %d",a3.aos);
-    printf("\n");
+    obj.s.side=2;
+    printf("side: %d \n",obj.s.side);
+    obj.s.area=obj.s.side*obj.s.side;
+    printf("area of square : %d",obj.s.area);
+    break;
     
-    
+    case 4:
     printf("rectangle\n");
-    a4.w=5;
-    a4.h=3;
-    printf("width: %d \n height : %d\n",a4.w,a4.h);
-    a4.aor=a4.w*a4.h;
-    printf("area of rectangle :%f\n",a4.aor);
+    obj.r.width=5;
+    obj.r.height=3;
+    printf("width: %d \n height : %d\n",obj.r.width,obj.r.height);
+    obj.r.area=obj.r.width*obj.r.height;
+    printf("area of rectangle :%f\n",obj.r.area);
+    break;
+    }
+    }
+    while(ch!=0);
     return 0;
 }
 

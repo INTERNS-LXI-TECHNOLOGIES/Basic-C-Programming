@@ -3,13 +3,7 @@
                             Online C Compiler.
                 Code, Compile, Run and Debug C program online.
 Write your code in this editor and press "Run" button to compile and execute it.
-Program to read 5 customers account details and perform following functions Using
-Structure Array & Function
-      Search
-        Balance Checking
-         Display All
-            Deposit
-             Withdraw
+ Program to find Area of square ,Rectangle ,Triangle and Circle using Structure & Union
 *******************************************************************************/
 #include <stdio.h>
 struct customer
@@ -19,10 +13,9 @@ struct customer
     int balance;
 };
 void display(struct customer c[5]);
-int search(struct customer c[5]);
-void deposit(struct customer c[5]);
-void withdraw(struct customer c[5]);
-
+int search(struct customer c[5], int);
+void deposit(struct customer c[5], int, int);
+void withdraw(struct customer c[5], int, int);
 int main()
 {
     struct customer c[5];
@@ -48,22 +41,26 @@ int main()
                 break;
             case 2:
             printf("Enter account number to search : ");
-            scanf("%d", &c[i].accountno);
-            index= search(c);
+            scanf("%d", &accountno);
+            index= search(c,accountno);
             if(index==-1)
                {
-                   printf("record not found");
+                  printf("record not found \n");
+                  
                } 
                else
                {
-                   printf("a/c number:%d\n name:%s\n balance:%d\n",c[index].accountno,c[index].name,c[index].balance);
+                    printf("a/c number:%d\n name:%s\n balance:%d\n"
+                   ,c[index].accountno,c[index].name,c[index].balance);
+                   
+                   
                }
                 break;
             case 3:
-                deposit(c);
+                deposit(c,accountno,amnt);
                 break;
             case 4:
-                withdraw(c);
+                withdraw(c, accountno, amnt);
         }
     }
     while (choice != 0);
@@ -72,7 +69,7 @@ int main()
 }
 void display(struct customer c[5])
 {
-    int i;
+    int i,accountno;
     printf("A/c No\tName\tBalance\n");
     for (i = 0; i < 5; i++)
     {
@@ -80,9 +77,9 @@ void display(struct customer c[5])
     } 
 }
 
-int search(struct customer c[5])
+int search(struct customer c[5], int number)
 {
-    int i,number;
+    int i,accountno;
     for (i = 0; i < 5; i++)
     {
         if (c[i].accountno == number)
@@ -91,27 +88,40 @@ int search(struct customer c[5])
         }
     }
      return -1;  
- 
 }
 
-void deposit(struct customer c[5])
+void deposit(struct customer c[5], int accountno, int amnt)
 {
-    int i,amnt;
+    int i,number;
     printf("Enter account number : ");
-    scanf("%d", &c[i].accountno);
+    scanf("%d", &accountno);
     printf("Enter amount to deposit : ");
     scanf("%d", &amnt);
-    c[i].balance = c[i].balance+amnt;
+    i=search(c,number);
+    if(i== -1)
+    {
+    printf("record not found");
+    }
+    else
+    {
+     c[i].balance = c[i].balance+amnt;   
+    }
+    
 }
 
-void withdraw(struct customer c[5])
+void withdraw(struct customer c[5], int accountno, int amnt)
 {
-    int i,amnt;
+    int i,number;
     printf("Enter account number : ");
-    scanf("%d", &c[i].accountno);
+    scanf("%d", &accountno);
     printf("Enter amount to withdraw : ");
     scanf("%d", &amnt);
-    if (c[i].balance < amnt)
+    i=search(c,number);
+    if(i== -1)
+    {
+    printf("record not found");
+    }
+    else if(c[i].balance < amnt)
     {
         printf("Insufficient balance\n");
     }

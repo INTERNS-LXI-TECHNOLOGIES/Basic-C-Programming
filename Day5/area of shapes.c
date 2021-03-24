@@ -3,7 +3,7 @@
                             Online C Compiler.
                 Code, Compile, Run and Debug C program online.
 Write your code in this editor and press "Run" button to compile and execute it.
-Program to find Area of square ,Rectangle ,Triangle and Circle using Structure & Union
+
 *******************************************************************************/
 #include <stdio.h>
 struct triangle
@@ -34,7 +34,9 @@ struct rectangle
 int main()
 {
     int ch;
-    printf("1.triangle \n 2.circle \n 3.square \n 4.rectangle \n");
+    do
+    {
+    printf("\n\n 1.triangle \n 2.circle \n 3.square \n 4.rectangle 0.exit \n");
     printf("enter ur choice: ");
     scanf("%d",&ch);
     switch(ch)
@@ -67,8 +69,8 @@ int main()
     printf("area of rectangle :%f",a4.aor);
     printf("\n");
     break;
-    default:
-    printf("invalid choice");
     }
+    }while(ch!=0);
     return 0;
 }
+
