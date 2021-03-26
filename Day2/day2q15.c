@@ -16,6 +16,6 @@ for(a=1;a<=n;a++)
             printf("(%d, %d, %d)\n",a,b,c);
         }
          
-        return 0;
+        return 0 ;
         }
 
