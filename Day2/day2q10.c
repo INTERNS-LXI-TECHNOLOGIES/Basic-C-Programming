@@ -6,10 +6,10 @@ int main()
 	printf("Enter a number\n");
 	scanf("%d",&a);
 	b=a;
-	while(b!=0){
-		b=b/10;
-		e++;
-		}
+	//while(b!=0){
+	//	b=b/10;
+	//	e++;
+	//	}
 	
 	b=a;
 	while(a!=0)
