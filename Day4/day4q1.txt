@@ -1,0 +1,18 @@
+#include <stdio.h>
+void sum();//put ; at end
+int main()
+{
+	sum();// function ends with ();
+	//sum();
+	
+	return 0;
+	}
+	void sum()
+	{
+		int num1,num2,sum;
+		printf("\nEnter Two numbers\n");
+		scanf("%d%d",&num1,&num2);
+		sum=num1+num2;
+		printf("The sum of 2 number is %d",sum);
+		//return 0; [ no need of return 0	]
+				}
