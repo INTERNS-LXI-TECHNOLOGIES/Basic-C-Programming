@@ -1,0 +1,29 @@
+#include <stdio.h>
+int Reverse(int);
+int main(){
+	int a,b;
+	printf("Enter the number\n");
+	scanf("%d",&a);
+	if(a==Reverse(a)){
+	printf("The number is paindrome: %d",b);
+		
+		}
+		else
+		{
+			printf("Not a palindrome");
+		}
+	return 0;
+	}
+	int Reverse (int num1){
+		int rev,x;
+		while(num1!=0){
+		
+		x=num1%10;
+		rev=rev*10+x;
+		num1=num1/10;
+			
+		
+		 
+			}
+			return rev;
+		}
