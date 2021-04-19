@@ -1,0 +1,41 @@
+#include <stdio.h>
+void sort(int,int[]);
+int main(){
+int limit1,values1[100],i;
+	printf("Enter limit\n");
+	scanf("%d\n",&limit1);
+	printf("Enter Values\n");
+	for(i=0;i<limit1;i++)
+	{
+		scanf("%d\n",&values1[i]);
+	}
+	
+	
+	sort(limit1, values1);
+	}
+	
+	
+	
+void sort(int limit2,int values2[100]){
+	int i,j,temp=0;
+//	int limit1,values1[100];
+
+	for(i=0;i<limit2-1;i++){
+		for(j=i+1;j<limit2;j++)
+		{
+			if(values2[i]>values2[j]){
+				temp=values2[i];
+				values2[i]=values2[j];
+				values2[j]=temp;
+				}
+		
+	}
+	}
+	printf("The sorted values are :\n");
+	for(i=0;i<limit2;i++){
+	
+		printf("%d\n",values2[i]);
+	}
+	}
+	
+	
