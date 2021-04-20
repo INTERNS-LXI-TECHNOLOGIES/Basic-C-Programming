@@ -1,5 +1,5 @@
 #include <stdio.h>
-int string(char[100]);
+int string(char[]);
 int main() {
     char s[100];
     int c;

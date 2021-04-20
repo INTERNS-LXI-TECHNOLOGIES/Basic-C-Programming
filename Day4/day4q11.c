@@ -3,14 +3,16 @@ void strong(int);
 int main()
 {
     int num1;
+    for(num1=100;num1<=1000;num1++){
     strong(num1);
+    	}
     return 0;
 }
 void strong(int num2)
 {
     int i,x,sum,rem,fact;
-    for(num2=100;num2<=1000;num2++)
-    {
+   // for(num2=100;num2<=1000;num2++){
+    
         x=num2;
         sum=0;
         while(x!=0)
@@ -24,7 +26,7 @@ void strong(int num2)
             }
             sum=sum+fact;
             x=x/10;
-        }
+    //    }
     if(sum==num2)
     printf("strong series from 100 and 1000 is :%d \t",num2);
     }
