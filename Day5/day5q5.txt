@@ -1,0 +1,18 @@
+#include <stdio.h>
+struct m 
+{
+	int inche
+}s1;
+void  inches(struct m s1);
+int main(){
+	printf("Enter a integer to convert to foot\n");
+	scanf("%d",&s1.inche);
+	inches(s1);
+	}
+	void inches(struct m s1){
+		int foot,j;
+		j=s1.inche%12;
+		foot=s1.inche/12;
+		printf("\n%d inches = %d foot %d inches",s1.inche,foot,j);
+		return;
+		}
