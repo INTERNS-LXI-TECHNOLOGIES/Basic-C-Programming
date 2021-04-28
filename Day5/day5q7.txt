@@ -1,0 +1,36 @@
+#include<stdio.h>
+struct complex
+{
+    int real;
+    int imag;
+    int temp;
+}s1,s2;;
+void add(struct complex s1 , struct complex s2);
+void multi(struct complex s1 , struct complex s2);
+int main()
+{
+   
+   s1.real=1;
+   s1.imag=3;
+   s2.real=5;
+   s2.imag=6;
+   add(s1,s2);
+   multi(s1,s2);
+   return 0;
+}
+void add(struct complex s1 , struct complex s2)
+{
+    int real,imag;
+   real= s1.real+s2.real;
+   imag= s1.imag+s2.imag;
+   
+   printf("sum: %d+%di \n",real,imag);
+}
+void multi(struct complex s1, struct complex s2)
+{
+    int a,b,temp;
+    a= ((s1.real*s2.real)-(s1.imag*s2.imag));
+    b=((s1.real*s2.imag)+(s1.imag*s2.real));
+    temp=a+b;
+    printf("product:%d+%di\n",a,b);
+}
