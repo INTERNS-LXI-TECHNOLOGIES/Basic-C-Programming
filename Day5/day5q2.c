@@ -1,65 +1,98 @@
-#include <stdio.h>
-struct students
-{
-	char *name[20];
-	//int Roll_no;
-	int english;
-	int maths;
-	int science;
-}s1[];
-int main(){
-	int c;
-	char *Search_name;
-	int i;
-	for(i=0;i<2;i++)
-	{
-	printf("\nEnter the name of student no %d\n",i+1);
-		scanf("%s",&s1[i].name);
-		printf("Enter the mark of student no %d in english out of 100\n",i+1);
-		scanf("%d",&s1[i].english);
-			printf("Enter the mark of student no %d in maths out of 100\n",i+1);
-		scanf("%d",&s1[i].maths);
-		printf("Enter the mark of student no %d in science out of 100\n",i+1);
-		scanf("%d",&s1[i].science);
-	}
-	
-	printf("Enter case (1 for search \t 2 for total mark \t 3 for percentage)5\n");
-		scanf("%d",&c);
-	switch(c)
-	{
-		d:
-	case 1:
-	printf("\n Search for a Student\n");
-	printf("Enter the name of the student to search\n");
-	scanf("%s",&Search_name);
-		
-	for(i=0;i<2;i++){
-	
-	if(Search_name==s1[i].name)
-	
-		printf("The Search Name found");
-		printf("\nthe marks are\n");
-		printf("english : %d\n",s1[i].english);
-		printf("maths : %d\n",s1[i].maths);
-		printf("science : %d\n",s1[i].science);
-		
 
-	}
-	break;
-	
-	case 2:
-	printf("\nTotal Mark of the students\n");
-	for(i=0;i<2;i++){
-	printf("Total Mark of  %s is %d\n",s1[i].name,s1[i].english+s1[i].maths+s1[i].science);
-	}
-	break;
-case 3:
-printf("\nPercentage  Mark of the students\n");
-	for(i=0;i<2;i++){
-	printf("Total percentage of  %s is %.2f\n",s1[i].name,(s1[i].english+s1[i].maths+s1[i].science)*0.333);//(total mark/300)*100
-		
-	}
-	break;	
-	
+#include<stdio.h>
+struct student 
+{
+    char name[20];
+    int regno;
+    int m1;
+    int m2;
+    int m3;
+    float tot;
+    float avg;
+    float percen;
+}s[];
+
+void totalmark(struct student s[]);
+void percentage(struct student s[]);
+void displayAll(struct student[]);
+void search(struct student s[]);
+int main()
+{ 
+   
+    int i;
+    for(i=0;i<6;i++)
+    {
+    printf("input name\n");
+      scanf("%s\n",&s[i].name);
+    	printf("register number\n");	
+    	 scanf("%d\n",&s[i].regno);
+    		printf("mark1\n");
+    	 scanf("%d\n",&s[i].m1);
+    		printf("mark2\n");
+    	 scanf("%d\n",&s[i].m2);
+    		printf("mark3\n");
+    	 scanf("%d\n",&s[i].m3);
+    }
+    
+    totalmark(s);
+    percentage(s);
+    displayAll(s);
+    search(s);
+    return 0;
 }
+
+void totalmark(struct student s[])
+{
+    int i;
+    for(i=0;i<6;i++)
+    {
+    s[i].tot=s[i].m1+s[i].m2+s[i].m3;
+    printf("total mark of %s is %.2f\n",s[i].name,s[i].tot);
+    }
+}
+void percentage(struct student s[])
+{
+    int i;
+    for(i=0;i<6;i++)
+    {
+    s[i].percen=(s[i].tot/300.0)*100;
+    printf("percentage of %s is %.2f \n \n",s[i].name,s[i].percen);
+    }
+}
+void displayAll(struct student s[])
+{
+    int i;
+        printf("student details..\n");
+        for(i=0;i<6;i++)
+    {
+        printf("name:%s\n",s[i].name);
+        printf("regno:%d\n",s[i].regno);
+        printf("m1:%d\t m2:%d\t m3:%d\t\n",s[i].m1,s[i].m2,s[i].m3);
+        printf("total:%.2f\n",s[i].tot);
+        printf("percentage:%.2f\n",s[i].percen);
+    }
+}
+void search(struct student s[])
+{
+    int i,flag=0,number;
+    printf("enter regno:");
+    scanf("%d",&number);
+    for (i=0;i<6;i++)
+    {
+        if (s[i].regno == number)
+        {
+           flag=i;
+           break;
+        } 
+    }
+       
+        if(flag==i)
+       {
+       
+        
+             printf("Name: %s\n ",s[i].name);
+             printf("total of %s is %.2f\n",s[i].name,s[i].tot);
+             printf("percentage of %s is %.2f\n",s[i].name,s[i].percen);
+        }
+      
 }
