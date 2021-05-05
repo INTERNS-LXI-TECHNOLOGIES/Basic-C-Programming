@@ -1,36 +1,42 @@
-#include<stdio.h>
-struct Time
+#include <stdio.h>
+
+struct time
 {
-    int hr;
-    int min;
-    int sec;
+int hr,min,sec;
 }t[];
-void data(struct Time t[]);
+void newTime(struct time t[]);
+
 
 int main()
 {
-  struct Time t[3];
-  int i;
- 
-     t[0].hr=3;
- t[0].min=40;
- t[0].sec=35;
- t[1].hr=2;
-  t[1].min=35;
- t[1].sec=45;
- t[2].hr=30;
-  t[2].min=16;
- t[2].sec=5;
- 
-  
-data(t);
-
-}
-void data(struct Time t[])
+int i;
+struct time t[5];
+for(i=0;i<3;i++)
 {
-    int i;
-    for(i=0;i<3;i++)
-    {
-    printf("\n\n%d hours \t %d minutes \t %dseconds\n",t[i].hr,t[i].min,t[i].sec);
-    }
+printf("Enter Time in hour,minute,seconds:\n");
+scanf("%d %d %d", &t[i].hr, &t[i].min, &t[i].sec);
+}
+newTime(t);
+}
+void newTime(struct time t[])
+{
+int i,t1=0,t2=0,t3=0;
+for(i=0;i<3;i++)
+{
+t1 = t1 +t[i].hr;
+t2 = t2 +t[i].min;
+t3 = t3 +t[i].sec;
+}
+while(t3>=60) 
+{
+t3 = t3-60;
+t2++;
+}
+while(t2>=60)
+{
+t2 = t2-60;
+t1++;
+}
+
+printf("\n %d Hour  %d Minute %d Second",t1,t2,t3);
 }
